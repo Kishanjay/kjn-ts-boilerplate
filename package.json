@@ -1,0 +1,29 @@
+{
+  "name": "@kn/ts-boilerplate",
+  "version": "0.0.1",
+  "description": "Lets do a proper setup for a ts project for the **last time**. This repo will function as a boilerplate for every ts browser project to come.",
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "lint:prettier": "prettier --check .",
+    "lint:prettier:fix": "prettier --write .",
+    "lint-staged": "lint-staged",
+    "build": "tsc --pretty"
+  },
+  "author": "Kishan Nirghin",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.4.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3"
+  }
+}
