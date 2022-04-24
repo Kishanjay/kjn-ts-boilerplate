@@ -208,6 +208,14 @@ Example:
 }
 ```
 
+## Git
+
+Optionally turn off fast-forwarding on merge
+
+```sh
+git config merge.ff no
+```
+
 # Release
 
 Before publishing to npmjs.com create an NPM_TOKEN
