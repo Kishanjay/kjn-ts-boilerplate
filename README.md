@@ -1,5 +1,7 @@
 # KN TypeScript boilerplate
 
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
 Lets do a proper setup for a TypeScript project for the **last time**.
 This repo will serve as a boilerplate for every future ts project to come.
 
@@ -208,7 +210,15 @@ Example:
 
 # Release
 
-For releasing npm packages we're using `standard-version` in combination with conventional commits
+Before publishing to npmjs.com create an NPM_TOKEN
+
+```sh
+npm adduser
+```
+
+## standard-version
+
+Option 1: Releasing npm packages using `standard-version` in combination with conventional commits
 to take care of our semantic versioning.
 
 ```sh
@@ -226,4 +236,24 @@ To publish the current release
 
 ```sh
 npm publish
+```
+
+## semantic-release
+
+Semantic release is fully automated and pushes your releases from a ci environment
+
+```sh
+npx semantic-release-cli setup
+npm install --save-dev semantic-release
+```
+
+Create a ci workflow file as in
+[.github/workflows/release.yml](.github/workflows/release.yml)
+
+Create `release.config.js`
+
+```js
+module.exports = {
+  branches: ["main"],
+};
 ```
