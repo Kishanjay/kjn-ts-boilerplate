@@ -10,7 +10,6 @@
     "lint:prettier:fix": "prettier --write .",
     "lint-staged": "lint-staged",
     "build": "tsc --pretty",
-    "semantic-release": "semantic-release",
     "release": "standard-version"
   },
   "author": "Kishan Nirghin",
@@ -25,7 +24,6 @@
     "husky": "^7.0.0",
     "lint-staged": "^12.4.0",
     "prettier": "^2.6.2",
-    "semantic-release": "^19.0.2",
     "standard-version": "^9.3.2",
     "typescript": "^4.6.3"
   },

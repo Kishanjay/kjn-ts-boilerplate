@@ -205,3 +205,25 @@ Example:
   "include": ["./src/**/*.ts"]
 }
 ```
+
+# Release
+
+For releasing npm packages we're using `standard-version` in combination with conventional commits
+to take care of our semantic versioning.
+
+```sh
+npm install --save-dev standard-version
+npm set-script release "standard-version"
+```
+
+Now to create a release simply do
+
+```sh
+npm run release
+```
+
+To publish the current release
+
+```sh
+npm publish
+```
