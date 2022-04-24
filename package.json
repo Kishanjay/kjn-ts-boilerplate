@@ -1,6 +1,6 @@
 {
   "name": "@kjn/ts-boilerplate",
-  "version": "0.0.0-development",
+  "version": "0.2.0",
   "description": "Lets do a proper setup for a ts project for the **last time**. This repo will function as a boilerplate for every ts browser project to come.",
   "scripts": {
     "prepare": "husky install",
