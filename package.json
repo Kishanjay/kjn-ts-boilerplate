@@ -1,6 +1,6 @@
 {
-  "name": "@kn/ts-boilerplate",
-  "version": "0.0.1",
+  "name": "@kjn/ts-boilerplate",
+  "version": "0.0.0",
   "description": "Lets do a proper setup for a ts project for the **last time**. This repo will function as a boilerplate for every ts browser project to come.",
   "scripts": {
     "prepare": "husky install",
@@ -9,7 +9,9 @@
     "lint:prettier": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
     "lint-staged": "lint-staged",
-    "build": "tsc --pretty"
+    "build": "tsc --pretty",
+    "semantic-release": "semantic-release",
+    "release": "standard-version"
   },
   "author": "Kishan Nirghin",
   "license": "ISC",
@@ -23,6 +25,15 @@
     "husky": "^7.0.0",
     "lint-staged": "^12.4.0",
     "prettier": "^2.6.2",
+    "semantic-release": "^19.0.2",
+    "standard-version": "^9.3.2",
     "typescript": "^4.6.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kishanjay/kjn-ts-boilerplate.git"
   }
 }
