@@ -2,18 +2,35 @@
   "name": "@kjn/ts-boilerplate",
   "version": "0.3.0",
   "description": "Lets do a proper setup for a ts project for the **last time**. This repo will function as a boilerplate for every ts browser project to come.",
+  "exports": {
+    "import": "./dist/mjs/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "prepare": "husky install",
+    "prepublishOnly": "npm run build && cp -R build dist",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "lint:prettier": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
     "lint-staged": "lint-staged",
-    "build": "tsc --pretty",
+    "build": "npm run build:cjs && npm run build:mjs",
+    "build:cjs": "tsc --pretty -p tsconfig-cjs.json",
+    "build:mjs": "tsc --pretty -p tsconfig-mjs.json",
     "release": "standard-version",
     "semantic-release": "semantic-release"
   },
   "author": "Kishan Nirghin",
+  "keywords": [
+    "Boilerplate",
+    "Dev setup",
+    "Typescript",
+    "Publishing",
+    "Linting"
+  ],
   "license": "ISC",
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",

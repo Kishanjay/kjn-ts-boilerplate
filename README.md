@@ -41,9 +41,28 @@ Source being the bigger entity and destination being the smaller entity.
 e.g.
 
 ```sh
-build:ios
+build:cjs
 deploy:production
 ```
+
+When building npm packages a dual commonJS/ESM packages
+
+```
+"type": "module",
+"main": "dist/index.js"
+```
+
+Can be replaced for:
+
+```
+"exports": {
+  "import": "./dist/mjs/index.js",
+  "require": "./dist/cjs/index.js"
+}
+```
+
+Additionally specify a `files` property in `package.json` to indicate which files should end up
+in the distribution.
 
 ## Commitlint
 
@@ -207,6 +226,9 @@ Example:
   "include": ["./src/**/*.ts"]
 }
 ```
+
+To create npm packages that you'd like to use both with commonJS and ESM, a dual built setup
+can be achieved by splitting-up tsconfig into the 'bare' config and the output format.
 
 ## Git
 
