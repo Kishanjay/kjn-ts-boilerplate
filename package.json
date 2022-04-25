@@ -2,9 +2,14 @@
   "name": "@kjn/ts-boilerplate",
   "version": "0.4.0",
   "description": "Lets do a proper setup for a ts project for the **last time**. This repo will function as a boilerplate for every ts browser project to come.",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/mjs/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    "import": "./dist/mjs/index.js",
-    "require": "./dist/cjs/index.js"
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/cjs/index.js"
+    }
   },
   "files": [
     "dist/**/*"
@@ -17,9 +22,10 @@
     "lint:prettier": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
     "lint-staged": "lint-staged",
-    "build": "npm run build:cjs && npm run build:mjs",
+    "build": "npm run build:cjs && npm run build:mjs && npm run build:types",
     "build:cjs": "tsc --pretty -p tsconfig-cjs.json",
     "build:mjs": "tsc --pretty -p tsconfig-mjs.json",
+    "build:types": "tsc --pretty -p tsconfig.json",
     "release": "standard-version",
     "semantic-release": "semantic-release"
   },
