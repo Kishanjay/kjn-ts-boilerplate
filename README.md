@@ -268,6 +268,8 @@ To publish the current release
 npm publish
 ```
 
+The version number will automatically be updated according to the conventional commit messages.
+
 ## semantic-release
 
 Semantic release is fully automated and pushes your releases from a ci environment
@@ -304,8 +306,5 @@ module.exports = {
 For the above to work, HUSKY would need to be disabled since the ${nextRelease.notes} doesn't
 fit the conventional commit guidelines as to how lengthy the commit body can be.
 
-```js
-module.exports = {
-  branches: ["main"],
-};
-```
+After pushing and github has ran its pipeline, you'd need to pull to get the updated package.json
+version number locally.

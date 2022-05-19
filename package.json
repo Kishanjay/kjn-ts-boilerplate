@@ -9,7 +9,8 @@
     ".": {
       "import": "./dist/mjs/index.js",
       "require": "./dist/cjs/index.js"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist/**/*"
@@ -29,7 +30,7 @@
     "release": "standard-version",
     "semantic-release": "semantic-release"
   },
-  "author": "Kishan Nirghin",
+  "author": "Kishan Nirghin <kishan@itslogical.nl>",
   "keywords": [
     "Boilerplate",
     "Dev setup",
