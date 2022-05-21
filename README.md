@@ -1,4 +1,4 @@
-# KN TypeScript boilerplate
+# @kjn/ts-boilerplate
 
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
@@ -274,11 +274,6 @@ The version number will automatically be updated according to the conventional c
 
 Semantic release is fully automated and pushes your releases from a ci environment
 
-```sh
-npx semantic-release-cli setup
-npm install --save-dev semantic-release
-```
-
 Create a ci workflow file as in
 [.github/workflows/release.yml](.github/workflows/release.yml)
 
@@ -308,3 +303,14 @@ fit the conventional commit guidelines as to how lengthy the commit body can be.
 
 After pushing and github has ran its pipeline, you'd need to pull to get the updated package.json
 version number locally.
+
+To setup (automatically), which will create an npm_token and set it as a repository secret.
+
+```sh
+npx semantic-release-cli setup
+npm install --save-dev semantic-release
+```
+
+### Manual github setup
+
+Set the `NPM_TOKEN` as a github secret.
