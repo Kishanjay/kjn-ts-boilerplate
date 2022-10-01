@@ -6,5 +6,21 @@
   "[markdown]": {
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 100
-  }
+  },
+
+  // use "shortest" when short imports are prefered e.g. when using path aliases.
+  "typescript.preferences.importModuleSpecifier": "relative",
+
+  // "[typescript]": {
+  //   "editor.codeActionsOnSave": {
+  //     "source.sortImports": true, // Does only sorting
+  //     "source.organizeImports": true, // Sorts and removes unused imports
+  //   }
+  // }
+
+  // Groups files by type first when sorting.
+  "explorer.sortOrder": "type",
+
+  // Group files by casing first when sorting.
+  "explorer.sortOrderLexicographicOptions": "lower"
 }
