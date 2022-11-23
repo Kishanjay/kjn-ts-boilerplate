@@ -28,6 +28,7 @@
     "build:cjs": "tsc --pretty -p tsconfig-cjs.json",
     "build:mjs": "tsc --pretty -p tsconfig-mjs.json",
     "build:types": "tsc --pretty -p tsconfig.json",
+    "update:dependencies": "npm-upgrade",
     "release": "standard-version",
     "semantic-release": "semantic-release"
   },
@@ -41,20 +42,21 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "@commitlint/cli": "^16.2.3",
-    "@commitlint/config-conventional": "^16.2.1",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
     "@semantic-release/git": "^10.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.20.0",
-    "@typescript-eslint/parser": "^5.20.0",
-    "eslint": "^8.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
-    "husky": "^7.0.0",
-    "lint-staged": "^12.4.0",
-    "parcel": "^2.5.0",
-    "prettier": "^2.6.2",
-    "semantic-release": "^19.0.2",
-    "standard-version": "^9.3.2",
-    "typescript": "^4.6.3"
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "npm-upgrade": "^3.1.0",
+    "parcel": "^2.8.0",
+    "prettier": "^2.8.0",
+    "semantic-release": "^19.0.5",
+    "standard-version": "^9.5.0",
+    "typescript": "^4.9.3"
   },
   "publishConfig": {
     "access": "public"
