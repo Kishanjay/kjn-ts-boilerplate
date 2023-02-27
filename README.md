@@ -314,3 +314,7 @@ npm install --save-dev semantic-release
 ### Manual github setup
 
 Set the `NPM_TOKEN` as a github secret.
+
+Additionally ensure that `Settings` > `Actions`> `General` > `Workflow permissions` is set to `Read and write permissions`.
+
+The github-actions bot will try to write to the repositry. Failing to setup correctly will result in a `permission denied to github-actions[bot]` error
