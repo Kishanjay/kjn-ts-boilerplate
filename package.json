@@ -1,6 +1,6 @@
 {
   "name": "@kjn/ts-boilerplate",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Lets do a proper setup for a ts project for the **last time**. This repo will function as a boilerplate for every ts browser project to come.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/mjs/index.js",
